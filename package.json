@@ -12,6 +12,13 @@
     "node": ">=12"
   },
   "types": "./types/index.d.ts",
+  "typesVersions": {
+    ">=4.3": {
+      "*": [
+        "./types/ts4.3/*"
+      ]
+    }
+  },
   "keywords": [
     "styles",
     "css",
