@@ -6,13 +6,7 @@ import Document, {
   DocumentContext
 } from 'next/document';
 import style9 from 'style9';
-
-const sytles = style9.create({
-  body: {
-    // contrived example, but with UI Kit would define vars, base styles, theme
-    backgroundColor: 'OrangeRed'
-  }
-});
+import { sytles } from '../shared/styles';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -24,7 +18,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className={sytles('body')}>
+        <body className={style9(sytles.body)}>
           <Main />
           <NextScript />
         </body>
